@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*
+	Theme Factory
+	Versão		: 5.0
+	Autor		: Angelo Rocha
+	Site		: www.angelorocha.com.br
+	Contato		: contato@angelorocha.com.br
+	Licença		: GPL V.2.0
+*/
+#tf-menu{position:absolute;background:#FFF; color:rgb(80,80,80); width:980px; height:30px; margin:0px auto; text-align:left; margin-bottom:5px;filter:alpha(opacity=50);-moz-opacity:0.5;opacity: 0.5;z-index:100;}
+#tf-menu2{position:absolute;background:#000; color:rgb(255,255,255); width:980px; height:30px; margin:0px auto; text-align:left; margin-bottom:5px;filter:alpha(opacity=90);-moz-opacity:0.9;opacity: 0.9;z-index:100;}
+
+#tf-menu2 a{
+  text-shadow:#afafaf 0px 0px 0px;
+  color:rgb(255,102,0);
+}
+
+#tf-menu ul{overflow:hidden; float:left;}
+
+#tf-menu li{display:inline; line-height:30px; list-style:none; margin-right:5px; text-align:center;}
+
+
+
+#search-box{background:#EBEBEB; border:1px solid #CCC; float:right; width:175px; height:25px; margin:1px 25px;}
+#search-box input[type=text]{background:none; border:0; width:130px; float:left; padding:4px 0 0 5px;}
+#search-box input[type=submit]{background:#333; color:#FFF; border:0; float:right; margin-right:1px; width:30px; height:23px;}

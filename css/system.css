@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*
+	Theme Factory
+	Versão		: 5.0
+	Autor		: Angelo Rocha
+	Site		: www.angelorocha.com.br
+	Contato		: contato@angelorocha.com.br
+	Licença		: GPL V.2.0
+*/
+
+#redir{background:#FFF; font-size:1.2em; padding:10px; font-weight:bold; color:#333; text-align:center; width:400px; height:auto; margin:15% auto;
+					border:1px solid #999;}
+div.errorMsg{background:#FFF; font-size:1.2em; padding:10px; font-weight:bold; color:#F00;}
+div.confirmMsg{background:#FFF; font-size:1.2em; padding:10px; font-weight:bold; color:#093;}
+div.resultMsg{background:#FFF; font-size:1.2em; padding:10px; font-weight:bold; color:#09C;}
+
+#closed{background:url(../images/back-closed.png) repeat-x #FFF; overflow:hidden;}
+#closemsg{width:250px; height:auto; position:absolute; right:10px; top:10px; text-align:center; font-size:14px; color:#F00; font-weight:bold;}
+#siteclosed{background:url(../images/close-form.png) top center no-repeat; width:510px; height:284px; position:relative; margin:15% auto;}
+#closeform{width:350px; height:auto; text-align:right; position:absolute; right:10px; bottom:50px;}
+#closeform label{width:60px; float:left; line-height:40px; text-align:right; font-weight:bold; color:#999;}
+#closeform input{border:0;}
+#closeform input[type=text]{background:url(../images/input.png) center no-repeat; display:block; width:250px; float:right; line-height:30px; height:30px;}
+#closeform input[type=password]{background:url(../images/input.png) center no-repeat; display:block; width:250px; float:right; line-height:30px; height:30px;}
+#closeform input[type=submit]{background:url(../images/button.png) center no-repeat; width:130px; line-height:23px;}

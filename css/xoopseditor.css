@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*
+	Theme Factory
+	Versão		: 5.0
+	Autor		: Angelo Rocha
+	Site		: www.angelorocha.com.br
+	Contato		: contato@angelorocha.com.br
+	Licença		: GPL V.2.0
+*/
+
+/*======= Tinymce background textarea ========*/
+body.mceContentBody {
+    margin:                     0 !important;
+    padding:                    0 !important;;
+    background-color:           #FFF;
+    background-image:           none;
+    color:                      #000;
+}
+
+#content_text_tbl{width:60% !important;}		 /*Texto curto do fmContent*/
+#content_short{width:60% !important;}	 	    /* Largura do tiny mce*/

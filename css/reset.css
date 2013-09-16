@@ -1,0 +1,48 @@
+@charset "utf-8";
+/*
+	Theme Factory
+	Versão		: 5.0
+	Autor		: Angelo Rocha
+	Site		: www.angelorocha.com.br
+	Contato		: contato@angelorocha.com.br
+	Licença		: GPL V.2.0
+*/
+
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0;}
+
+body{
+	text-align: left;
+	font-family: arial;
+}
+
+
+a{text-decoration:none; font-weight:normal;}
+
+a:hover{}
+
+ul{}
+li{}
+ol{}
+
+input, textarea, select{background:#F9F9F9; border:1px solid #EBEBEB; padding:2px; margin:1px;}
+input[type=text]{font-family: arial;}
+input[type=password]{font-family: arial;}
+input[type=submit]{cursor:pointer;}
+input[type=button]{cursor:pointer;}
+input[type=image]{}
+input[type=file]{}
+
+h1{font-size:1.6em;margin:1.2em 0px;}
+h2{font-size:1.5em;margin:1em 0px;}
+h3{font-size:1.4em;margin:0.8em 0px;}
+h4{font-size:1.3em;margin:0.6em 0px;}
+h5{font-size:1.2em;margin:0.4em 0px;}
+h6{font-size:1.1em;margin:0.2em 0px;}
+

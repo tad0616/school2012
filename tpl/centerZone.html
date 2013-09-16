@@ -1,0 +1,81 @@
+<{if $xoBlocks.canvas_left && $xoBlocks.canvas_right}>
+
+    <div id="tf-centerZone" style="<{$centerBlock}>">
+
+    <{includeq file="$theme_name/tpl/centerBlock.html"}>
+
+    <{includeq file="$theme_name/tpl/centerLeft.html"}>
+
+    <{includeq file="$theme_name/tpl/centerRight.html"}>
+
+    <{includeq file="$theme_name/tpl/xoopsContents.html"}>
+
+    <{includeq file="$theme_name/tpl/centerBottom.html"}>
+
+    <{includeq file="$theme_name/tpl/leftBottom.html"}>
+
+    <{includeq file="$theme_name/tpl/rightBottom.html"}>
+
+    </div>
+    
+<{elseif $xoBlocks.canvas_left}>
+
+    <div id="tf-centerZone" style="<{$centerBlock}>">
+
+    <{includeq file="$theme_name/tpl/centerBlock.html"}>
+
+    <{includeq file="$theme_name/tpl/centerLeft.html"}>
+
+    <{includeq file="$theme_name/tpl/centerRight.html"}>
+
+    <{includeq file="$theme_name/tpl/xoopsContents.html"}>
+
+    <{includeq file="$theme_name/tpl/centerBottom.html"}>
+
+    <{includeq file="$theme_name/tpl/leftBottom.html"}>
+
+    <{includeq file="$theme_name/tpl/rightBottom.html"}>
+
+    </div>
+            	
+<{elseif $xoBlocks.canvas_right}>
+                    
+    <div id="tf-centerZone" style="<{$centerBlock}>">
+
+    <{includeq file="$theme_name/tpl/centerBlock.html"}>
+
+    <{includeq file="$theme_name/tpl/centerLeft.html"}>
+
+    <{includeq file="$theme_name/tpl/centerRight.html"}>
+
+    <{includeq file="$theme_name/tpl/xoopsContents.html"}>
+
+    <{includeq file="$theme_name/tpl/centerBottom.html"}>
+
+    <{includeq file="$theme_name/tpl/leftBottom.html"}>
+
+    <{includeq file="$theme_name/tpl/rightBottom.html"}>
+
+    </div>
+                        	
+<{else}>
+
+    <div id="tf-centerZone" style="<{$centerBlock}>">
+
+    <{includeq file="$theme_name/tpl/centerBlock.html"}>
+
+    <{includeq file="$theme_name/tpl/centerLeft.html"}>
+
+    <{includeq file="$theme_name/tpl/centerRight.html"}>
+
+    <{includeq file="$theme_name/tpl/xoopsContents.html"}>
+
+    <{includeq file="$theme_name/tpl/centerBottom.html"}>
+
+    <{includeq file="$theme_name/tpl/leftBottom.html"}>
+
+    <{includeq file="$theme_name/tpl/rightBottom.html"}>
+
+</div>
+                                    
+<{/if}>

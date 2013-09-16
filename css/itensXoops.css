@@ -1,0 +1,140 @@
+@charset "utf-8";
+/*
+	Theme Factory
+	Versão		: 5.0
+	Autor		: Angelo Rocha
+	Site		: www.angelorocha.com.br
+	Contato		: contato@angelorocha.com.br
+	Licença		: GPL V.2.0
+*/
+
+#content{width:98%; padding:2px;}
+
+#mainmenu a, #usermenu a{display:block; line-height:2em;background-image:url(../images/menu_background.png);background-position: center center;padding-left:20px;}
+#mainmenu a:hover, #usermenu a:hover{}
+#mainmenu a.menuSub{font-size:12px; color:#333; line-height:2.5em; margin-left:25px; border-bottom:1px dashed #FAFAFA;}
+#mainmenu a:hover.menuSub{border-bottom:1px dashed #333;}
+
+.item{}
+.itemHead{}
+.itemInfo{}
+.itemTitle{}
+.itemPoster{}
+.itemPostDate{}
+.itemStats{}
+.itemBody{}
+.itemText{}
+.itemText:first-letter{}
+.itemFoot{clear:both;}
+.itemAdminLink{}
+.itemPermaLink{}
+
+.comTitle{}
+.comText{}
+.comUserStat{}
+.comUserStatCaption{}
+.comUserStatus{}
+.comUserRank{}
+.comUserRankText{}
+.comDate{}
+.comDateCaption{}
+.signature{}
+
+.mytube_infoblock{color:#333;}
+.mytube_description{color:#333;}
+
+div.xoopsCode{background:url(../images/code.jpg) scroll; width:500px; height:auto; line-height:20px; overflow-y:scroll;}
+div.xoopsQuote{background:#FFF; width:500px; border-left:3px solid #CCC; border-right:1px dotted #CCC; border-bottom:1px dotted #CCC; border-top:1px dotted #CCC; padding:10px;}
+
+
+
+.bd{
+  font-size:12px;
+  width:700px;
+  line-height:150%;
+}
+.caption-text{
+  white-space:nowrap;
+  font-size:12px;
+}
+
+
+#com_text{
+  width:600px;
+  height:250px;
+}
+
+
+/*=============== styles for tables =================*/
+table {
+	margin: 0;
+	width: 100%;
+	border: none;
+	border-collapse: separate /*collapse*/;
+	border-spacing: 1px;
+}
+
+th {
+	padding: 4px;
+	vertical-align: middle;
+}
+
+.outer {
+	width: 99%;
+	border: 2px solid #ccc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	margin: 5px;
+}
+
+.head {
+	background-color: #AFAFAF;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.even {
+	background-color: #EFEFEF;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+.odd {
+	background-color: #DFDFDF;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+.foot {
+	background-color: #E1E7EF;
+	padding: 5px;
+	font-weight: bold;
+}
+
+tr.head td {
+	background-color: #BDE3FB;
+	padding: 5px;
+	font-weight: bold;
+}
+
+tr.even td {
+	background-color: #fff;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+tr.odd td {
+	background-color: #EFEFEF;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+tr.foot td {
+	background-color: #E1E7EF;
+	padding: 5px;
+	font-weight: bold;
+}
+
+td.head {max-width: 300px !important;}

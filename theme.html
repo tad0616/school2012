@@ -1,0 +1,279 @@
+<{assign var=theme_name value=$xoTheme->folderName}>
+<{php}>
+global $xoopsDB,$xoopsConfig;
+$use_default_config=false;
+if(file_exists(XOOPS_ROOT_PATH."/modules/tad_themes/xoops_version.php")){
+  $sql="select * from ".$xoopsDB->prefix("tad_themes")." where `theme_name`='{$xoopsConfig['theme_set']}'";
+  $result = $xoopsDB->query($sql);
+  $data=$xoopsDB->fetchArray($result);
+  foreach($data as $k=>$v){
+    $$k=$v;
+    $this->assign($k,$$k);
+  }
+  //以下會產生這些變數： $theme_id , $theme_name , $theme_type , $lb_width , $rb_width , $clb_width , $crb_width , $lb_color , $cb_color , $rb_color , $margin_top , $margin_bottom , $bg_img , $logo_img , $bg_attachment , $bg_color , $bg_position , $bg_repeat , $logo_top , $logo_right , $logo_bottom , $logo_left , $theme_enable , $slide_width , $slide_height , $font_size , $font_color , $link_color , $hover_color , $block_config , $bt_text , $bt_text_padding , $bt_bg_color , $bt_bg_img , $bt_bg_repeat , $bt_radius , $nvabar_pos
+  if(empty($data['theme_id']))$use_default_config=true;
+
+}else{
+  $use_default_config=true;
+}
+
+if($use_default_config){
+  $default['theme_id']='0';
+  $default['theme_name']='school2012';
+  $default['theme_type']='theme_type_1';
+  $default['lb_width']='200';
+  $default['rb_width']='200';
+  $default['clb_width']='49%';
+  $default['crb_width']='49%';
+  $default['lb_color']='#F4F4F4';
+  $default['cb_color']='#FFFFFF';
+  $default['rb_color']='#F4F4F4';
+  $default['margin_top']='0';
+  $default['margin_bottom']='0';
+  $default['bg_img']=XOOPS_URL."/themes/{$xoopsConfig['theme_set']}/images/bg/158.gif";
+  $default['logo_img']='';
+  $default['bg_attachment']='';
+  $default['bg_color']='#FFFFFF';
+  $default['bg_position']='left top';
+  $default['bg_repeat']='';
+  $default['logo_top']='';
+  $default['logo_right']='';
+  $default['logo_bottom']='';
+  $default['logo_left']='';
+  $default['theme_enable']='1';
+  $default['slide_width']='980';
+  $default['slide_height']='300';
+  $default['font_size']='12px';
+  $default['font_color']='#202020';
+  $default['link_color']='#3333CC';
+  $default['hover_color']='#FF3300';
+
+/* 增加屬性by hc 開始 */
+  $default['block_config']='right';
+  $default['bt_text']='#333';
+  $default['bt_bg_img']=XOOPS_URL."/themes/{$xoopsConfig['theme_set']}/images/bt_bg/green.gif";
+  $default['bt_bg_repeat']='0';
+  $default['bt_bg_color']='#DDEEFF';
+  $default['bt_text_padding']='33';
+  $default['bt_radius']='1';
+  $default['navbar_pos']='not-use';
+  $default['navbar_bg_top']='#54b4eb';
+  $default['navbar_bg_bottom']='#2fa4e7';
+  $default['navbar_hover']='#1684c2';
+/* 增加屬性by hc 結束 */
+
+  foreach($default as $k=>$v){
+    $$k=$v;
+    $this->assign($k,$$k);
+  }
+}
+
+$header_height=$slide_height+30;
+$this->assign("header_height",$header_height);
+
+$center_width=$slide_width-$lb_width-24;
+
+$h_block_width=round($slide_width/4,0)-4;
+  
+  
+if($theme_type=='theme_type_1'){
+  $left_block="background-color:{$lb_color};float:left; margin:4px 4px 4px 8px;width:{$lb_width}px;border-right:1px dashed #999;";
+  $center_block="background-color:{$cb_color};float:right; margin:2px 4px 4px 2px; width:{$center_width}px;";
+  $right_block="background-color:{$rb_color};float:left; margin:2px 2px 4px 4px; width:{$rb_width}px;border-right:1px dashed #999;";
+  $left_block2=$right_block2="";
+
+}elseif($theme_type=='theme_type_2'){
+  $left_block="background-color:{$lb_color};float:right; margin:2px 4px 2px 2px; width:{$lb_width}px;border-left:1px dashed #999;";
+  $center_block="background-color:{$cb_color};float:left; margin:2px 2px 4px 4px; width:{$center_width}px;";
+  $right_block="background-color:{$rb_color};float:right; margin:2px 4px 4px 2px; width:{$rb_width}px;border-left:1px dashed #999;";
+  $left_block2=$right_block2="";
+
+}elseif($theme_type=='theme_type_3'){
+  $left_block="background-color:{$lb_color};float:left; margin:2px 2px 2px 4px; width:{$lb_width}px;border-right:1px dashed #999;";
+  $center_block="background-color:{$cb_color};float:right; margin:2px 4px 4px 2px; width:{$center_width}px;";
+  $right_block="background-color:{$rb_color};float:none; margin:2px 2px 4px 4px; width:{$slide_width}px; clear:both;border-top:1px dashed #999;";
+  $left_block2="";
+  $right_block2="float:left; min-width: {$h_block_width}px; behavior: expression(this.style.width=(document.documentElement.offsetWidth<{$h_block_width})?'{$h_block_width}px':'100%');";
+
+}elseif($theme_type=='theme_type_4'){
+  $left_block="background-color:{$lb_color};float:right; margin:2px 4px 2px 2px; width:{$lb_width}px;border-left:1px dashed #999;";
+  $center_block="background-color:{$cb_color};float:left; margin:2px 0px 4px 10px; width:{$center_width}px;";
+  $right_block="background-color:{$rb_color};float:none; margin:2px 2px 4px 4px; width:{$slide_width}px; clear:both;border-top:1px dashed #999;";
+  $left_block2="";
+  $right_block2="float:left; min-width: {$h_block_width}px; behavior: expression(this.style.width=(document.documentElement.offsetWidth<{$h_block_width})?'{$h_block_width}px':'100%');";
+
+}elseif($theme_type=='theme_type_5'){
+  $center_width=$slide_width-$lb_width-$rb_width-24;
+  $left_block="background-color:{$lb_color};float:left; margin:2px 4px 4px 4px; width:{$lb_width}px;border-right:1px dashed #999;";
+  $center_block="background-color:{$cb_color};float:left; margin:2px 0px 4px 4px; width:{$center_width}px;";
+  $right_block="background-color:{$rb_color};float:right; margin:2px 4px 4px 0px; width:{$rb_width}px;border-left:1px dashed #999;";
+  $left_block2=$right_block2="";
+
+}elseif($theme_type=='theme_type_6'){
+  $center_width=$slide_width-$lb_width-$rb_width-24;
+  $left_block="background-color:{$lb_color};float:left; margin:2px 0px 4px 0px; width:{$lb_width}px;border-right:1px dashed #999;";
+  $center_block="background-color:{$cb_color};float:right; margin:2px 0px 4px 0px; width:{$center_width}px;";
+  $right_block="background-color:{$rb_color};float:left; margin:2px 4px 4px 0px; width:{$rb_width}px;border-right:1px dashed #999;";
+  $left_block2=$right_block2="";
+
+}elseif($theme_type=='theme_type_7'){
+  $center_width=$slide_width-$lb_width-$rb_width-24;
+  $left_block="background-color:{$lb_color};float:right; margin:2px 0px 4px 0px; width:{$lb_width}px;border-left:1px dashed #999;";
+  $center_block="background-color:{$cb_color};float:left; margin:2px 0px 4px 10px; width:{$center_width}px;";
+  $right_block="background-color:{$rb_color};float:right; margin:2px 0px 4px 0px; width:{$rb_width}px;border-left:1px dashed #999;";
+  $left_block2=$right_block2="";
+
+}elseif($theme_type=='theme_type_8'){
+  $left_block="background-color:{$lb_color};float:none; margin:2px 4px 2px 4px; width:{$lb_width}px;border-bottom:1px dashed #999;";
+  $center_block="background-color:{$cb_color};float:none; margin:2px 4px 2px 4px; width:{$slide_width}px;";
+  $right_block="background-color:{$rb_color};float:none; margin:2px 4px 2px 4px; width:{$slide_width}px; clear:both;border-top:1px dashed #999;";
+  $left_block2=$right_block2="float:left; min-width: {$h_block_width}px; behavior: expression(this.style.width=(document.documentElement.offsetWidth<{$h_block_width})?'{$h_block_width}px':'100%');";
+}
+
+
+$this->assign('leftBlock',$left_block);
+$this->assign('leftBlock2',$left_block2);
+$this->assign('centerBlock',$center_block);
+$this->assign('rightBlock',$right_block);
+$this->assign('rightBlock2',$right_block2);
+
+$logo_place="";
+if(!empty($logo_top))$logo_place.="top:{$logo_top}px;";
+if(!empty($logo_right))$logo_place.="right:{$logo_right}px;";
+if(!empty($logo_bottom))$logo_place.="bottom:{$logo_bottom}px;";
+if(!empty($logo_left))$logo_place.="left:{$logo_left}px;";
+$this->assign('logo_place',$logo_place);
+
+
+//檢查除錯模式
+$sql = "select conf_value from ".$xoopsDB->prefix("config")." where conf_title ='_MD_AM_DEBUGMODE'";
+$result = $xoopsDB->query($sql) or redirect_header($_SERVER['PHP_SELF'],3, mysql_error());
+list($debug)=$xoopsDB->fetchRow($result);
+if($debug==0){
+  $debug=1;
+}else{
+  $debug=0;
+}
+$this->assign('debug',$debug);
+
+//處理區塊標題by hc
+if($bt_bg_repeat==0){
+  $bt_bg_repeat="no-repeat 5px center";
+}else{
+  $bt_bg_repeat="";
+}
+if($bt_radius==1){
+  $bt_radius="border-radius:5px";
+}else{
+  $bt_radius="";
+}
+
+//若使用導覽工具列就停用舊工具列 by hc
+if($navbar_pos=='not-use'){
+$this->assign('navbar_pos',"");
+}else{
+$this->assign('navbar_pos',$navbar_pos);
+$header_height=$slide_height;
+$this->assign('header_height',$header_height);
+}
+
+//by hc
+if($slide_height!='0'){
+$this->assign('use_slide',1);
+}
+
+if($slide_height>='30'){
+$this->assign('use_search',1);
+}
+
+$navbar_logo="/uploads/tad_themes/{$xoopsConfig['theme_set']}/logo/logo";
+$check_navbar_logo=file_exists(XOOPS_ROOT_PATH.$navbar_logo.".png");
+
+if($check_navbar_logo=='true'){
+$this->assign('navbar_logo_img',XOOPS_URL.$navbar_logo.".png");
+}else{
+	$check_navbar_logo=file_exists(XOOPS_ROOT_PATH.$navbar_logo.".gif");
+	if($check_navbar_logo=='true'){
+	$this->assign('navbar_logo_img',XOOPS_URL.$navbar_logo.".gif");
+	}
+}
+
+<{/php}>
+<{includeq file="$theme_name/tpl/header.html"}>
+
+<!--處理區塊標題、導覽工具列的css設定-->
+<{php}>
+echo "
+<style>
+a.block_config{float:$block_config;}
+.blockTitle{color:$bt_text ; background: url($bt_bg_img) $bt_bg_repeat $bt_bg_color;padding: 3px 0 3px {$bt_text_padding}px;$bt_radius;}
+.navbar-inner { 
+background-image: -moz-linear-gradient(top, $navbar_bg_top, $navbar_bg_bottom);
+background-image: -webkit-linear-gradient(top, $navbar_bg_top, $navbar_bg_bottom);
+background-image: -o-linear-gradient(top, $navbar_bg_top, $navbar_bg_bottom);
+background-image: linear-gradient(to bottom, $navbar_bg_top, $navbar_bg_bottom);  
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from($navbar_bg_top), to($navbar_bg_bottom));  
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$navbar_bg_top, endColorstr=$navbar_bg_bottom, GradientType=0);
+background-color: $navbar_bg_bottom;
+}
+.navbar .nav > li > a:hover {background-color: $navbar_hover;}
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: $navbar_hover;
+}
+</style>
+";
+<{/php}>
+
+
+<div id="tf-container" class="shadow">
+
+  <div id="blockZone">
+
+    <{includeq file="$theme_name/tpl/leftBlock.html"}>
+    <{includeq file="$theme_name/tpl/centerZone.html"}>
+    <{if $theme_type!='theme_type_1' && $theme_type!='theme_type_2'}>
+      <{includeq file="$theme_name/tpl/rightBlock.html"}>
+    <{/if}>
+    <div class="clear"></div>
+        
+	</div>
+    
+</div>
+
+<{includeq file="$theme_name/tpl/footer.html"}>
+
+<{php}>
+if(!file_exists(XOOPS_ROOT_PATH."/modules/tad_themes/xoops_version.php")){
+  echo '<div style="text-align:center;margin:10px auto;"><a href="http://www.tad0616.net/modules/tad_uploader/index.php?of_cat_sn=76" target="_blank">'.TF_DL_TAD_THEMES.'</a></div>';
+}
+<{/php}>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    var leftBlock=$('#leftBlock').height();
+    var centerBlock=$('#tf-centerZone').height();
+    var rightBlock=$('#rightBlock').height();
+    var maxheight=leftBlock;
+    if(rightBlock > maxheight) maxheight=rightBlock;
+    if(centerBlock > maxheight) maxheight=centerBlock;
+    <{if $theme_type=='theme_type_5' || $theme_type=='theme_type_6' || $theme_type=='theme_type_7'}>
+      $('#leftBlock').height(maxheight);
+      $('#rightBlock').height(maxheight);
+    <{elseif $theme_type=='theme_type_3' || $theme_type=='theme_type_4'}>
+      $('#leftBlock').height(maxheight);
+    <{/if}>
+    
+    <{if $theme_type=='theme_type_1' || $theme_type=='theme_type_2'}>
+      var leftBlock_div=$("#leftBlock div").length;
+      if(leftBlock_div <= 1){
+        $("#leftBlock").width(0);
+        $("#tf-centerZone").width(980);
+      }
+    <{/if}>
+  });
+</script>
+</body>
+
+</html>

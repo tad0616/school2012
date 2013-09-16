@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<meta http-equiv="X-UA-Compatible" content="IE=100" />
+
+<title><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}></title>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<{$xoops_url}>/backend.php" />
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />							
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<style type="text/css">
+  body{color:<{$font_color}>;}
+  a{color:<{$link_color}>;}
+  a:hover{color:<{$hover_color}>;}
+</style>
+<link href="<{xoAppUrl modules/tadtools/bootstrap/css/bootstrap.css}>" rel="stylesheet" media="screen">
+<link href="<{xoAppUrl modules/tadtools/bootstrap/css/bootstrap-responsive.css}>" rel="stylesheet" media="screen">
+
+<script type='text/javascript'>
+  if(typeof jQuery == 'undefined') {
+  document.write("<script type='text/javascript' src='<{$xoops_url}>/modules/tadtools/jquery/jquery.js'><\/script>");
+  }
+</script>
+    <!--Bootstrap js-->
+    <script src="<{xoAppUrl modules/tadtools/bootstrap/js/bootstrap.js}>"></script>
+
+<{$xoops_module_header}>
+<script type="text/javascript" src="<{$xoops_imageurl}>js/efeitosespeciais.js"></script>
+
+</head>
+
+
+<body id="<{$xoops_dirname}>" style="background: <{$bg_color}> url(<{$bg_img}>) <{$bg_position}> <{$bg_repeat}> <{$bg_attachment}>;font-size:<{$font_size}>;">
+
+<!--div id="pre-header">
+    <div id="tf-header">
+    <p class="logo"><{$xoops_sitename}></p>
+	  </div>
+</div-->
+
+
+<!-- NAVBAR位置 -->
+<{if $navbar_pos}>
+  <div class="navbar <{$navbar_pos}>">
+  <{includeq file="$theme_name/tpl/navbar.html"}>
+<{/if}>
+
+<div style="position:relative;width:980px;height:<{$header_height}>px;margin:<{$margin_top}>px auto 0 auto;padding:0px;" class="shadow">
+  <{if $use_search}>
+    <div id="tf-menu">
+      <{includeq file="$theme_name/tpl/search.html"}>
+      <div class="clear"></div>
+    </div>
+  <{/if}>
+  
+  <{if $logo_img}>
+    <a href="<{$xoops_url}>" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>"><img src="<{$logo_img}>" style="position:absolute;z-index:500;<{$logo_place}>"></a>
+  <{/if}>
+  
+  <{if $use_slide}>
+    <{includeq file="$theme_name/tpl/slideshow.html"}>
+  <{/if}>
+  
+  <{if $navbar_pos}>
+  <{else}>
+    <div id="tf-menu2" >
+      <{includeq file="$theme_name/tpl/menu.html"}>
+      <{includeq file="$theme_name/plugins/loginbar-inline.html"}>
+      <div class="clear"></div>
+    </div>
+  <{/if}>
+</div>
