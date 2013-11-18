@@ -202,29 +202,34 @@ $this->assign('navbar_logo_img',XOOPS_URL.$navbar_logo.".png");
 <{includeq file="$theme_name/tpl/header.html"}>
 
 <!--處理區塊標題、導覽工具列的css設定-->
-<{php}>
-echo "
-<style>
-a.block_config{float:$block_config;}
-.blockTitle{color:$bt_text ; background: url($bt_bg_img) $bt_bg_repeat $bt_bg_color;padding: 3px 0 3px {$bt_text_padding}px;$bt_radius;}
-.navbar-inner { 
-background-image: -moz-linear-gradient(top, $navbar_bg_top, $navbar_bg_bottom);
-background-image: -webkit-linear-gradient(top, $navbar_bg_top, $navbar_bg_bottom);
-background-image: -o-linear-gradient(top, $navbar_bg_top, $navbar_bg_bottom);
-background-image: linear-gradient(to bottom, $navbar_bg_top, $navbar_bg_bottom);  
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from($navbar_bg_top), to($navbar_bg_bottom));  
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$navbar_bg_top, endColorstr=$navbar_bg_bottom, GradientType=0);
-background-color: $navbar_bg_bottom;
-}
-.navbar .nav > li > a:hover {background-color: $navbar_hover;}
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: $navbar_hover;
-}
+<style type="text/css">
+  a.block_config{float:<{$block_config}>;}
+  div.blockTitle{
+    color:<{$bt_text}> ; 
+    background: <{$bt_bg_color}> <{if $bt_bg_img}>url(<{$bt_bg_img}>) <{$bt_bg_repeat}><{/if}>;
+    padding: 3px 0 3px <{$bt_text_padding}>px;
+    <{$bt_radius}>;
+  }
+  .navbar-inner {
+    background-color: <{$navbar_bg_bottom}>;
+    background-image: -moz-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
+    background-image: -webkit-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
+    background-image: -o-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
+    background-image: linear-gradient(to bottom, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);  
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(<{$navbar_bg_top}>), to(<{$avbar_bg_bottom}>));  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=<{$navbar_bg_top}>, endColorstr=<{$navbar_bg_bottom}>, GradientType=0);
+  }
+  .navbar .nav > li > a:hover {
+    background-color: <{$navbar_hover}>;
+  }
+  .navbar .nav li.dropdown.open > .dropdown-toggle,
+  .navbar .nav li.dropdown.active > .dropdown-toggle,
+  .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: <{$navbar_hover}>;
+  }
+  
+
 </style>
-";
-<{/php}>
 
 
 <div id="tf-container" class="shadow">
