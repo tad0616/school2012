@@ -20,7 +20,11 @@
 
       <{if $xoops_isuser}>
         <{if $xoops_isadmin}>
-        <li><a rel="tooltip" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/index.php" title="<{$smarty.const.TF_MODULE_CONFIG}>"><i class="icon-th-large icon-white"></i></a></li>
+          <{if $xoops_dirname=="" || $xoops_dirname=="system"}>
+            <li><a rel="tooltip" href="<{$xoops_url}>/admin.php" title="<{$smarty.const.TF_MODULE_CONFIG}>"><i class="icon-th-large icon-white"></i></a></li>
+          <{else}>
+            <li><a rel="tooltip" href="<{$xoops_url}>/modules/<{$xoops_dirname}>/admin/index.php" title="<{$smarty.const.TF_MODULE_CONFIG}>"><i class="icon-th-large icon-white"></i></a></li>
+          <{/if}>
         <{/if}>
       
         <li class="dropdown" id="preview-menu">
@@ -31,7 +35,7 @@
           <{if $xoops_isadmin}>
             <li><a href="<{$xoops_url}>/admin.php"><i class="icon-lock"></i> <{$smarty.const.TF_USER_ADMIN}></a></li>
             <li><a rel="tooltip" href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=1" title="<{$smarty.const.TF_SYSTEM_CONFIG}>"><i class="icon-cog"></i> <{$smarty.const.TF_SYSTEM_CONFIG}></a></li>
-            <li><a href="<{$xoops_url}>/modules/tad_themes/admin/index.php"><i class="icon-list-alt"></i> <{$smarty.const.TF_THEME_ADMIN}></a></li>
+            <li><a href="<{$xoops_url}>/modules/tad_themes/admin/main.php"><i class="icon-list-alt"></i> <{$smarty.const.TF_THEME_ADMIN}></a></li>
             <li><a href="<{$xoops_imageurl}>tools/debug.php?op=debug&v=<{$debug}>"><i class="icon-warning-sign"></i> <{if $debug=='1'}><{$smarty.const.TF_THEME_DEBUG}><{else}><{$smarty.const.TF_THEME_UNDEBUG}><{/if}></a></li>
             <li><a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin"><i class="icon-th"></i> <{$smarty.const.TF_USER_BLOCK}></a></li>
             <li class="divider"></li>
