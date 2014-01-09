@@ -26,6 +26,7 @@ define("TF_USER_FORGET_PASS",	"Password lost ?");
 
 define("TF_BLOCK_CONFIG",	"Setup this block");
 define("TF_SYSTEM_CONFIG",	"Preferences");
+define("TF_SYSTEM_MODADM",	"Online install");
 define("TF_MODULE_CONFIG",	"Administration");
 define("TF_DL_TAD_THEMES",	"Please install \"Tad Themes\" module.");
 ?>

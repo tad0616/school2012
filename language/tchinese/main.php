@@ -6,8 +6,6 @@ define("TF_USER_ID",	"請輸入帳號");
 define("TF_USER_PASS",	"請輸入密碼");
 define("TF_USER_S_ID",	"帳號：");
 define("TF_USER_S_PASS",	"密碼：");
-define("LANG_USER_CLOSE",	"請輸入帳號");
-define("PASS_LANG_CLOSE",	"密碼");
 define("TF_USER_ENTER","登入");
 define("TF_USER_EXIT","登出");
 define("TF_USER_ADMIN","管理");
@@ -28,6 +26,7 @@ define("TF_USER_FORGET_PASS",	"忘記密碼");
 
 define("TF_BLOCK_CONFIG",	"設定本區塊");
 define("TF_SYSTEM_CONFIG",	"系統偏好設定");
+define("TF_SYSTEM_MODADM",	"線上安裝更新");
 define("TF_MODULE_CONFIG",	"模組管理區");
 define("TF_DL_TAD_THEMES",	"請安裝 Tad Themes 模組，可以讓您更進一步的調整佈景！");
 ?>

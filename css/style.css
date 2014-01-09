@@ -1,164 +1,36 @@
-@import url("block.css");
-body {
-	font-size: 1em;
-	line-height: 1em;
-	padding-top: 0px;
-}
-a {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-div.comText {
-	text-wrap: normal;
-	table-layout: fixed;
-	word-wrap: break-word;
-	width: 545px;
-	overflow: hidden;
-}
-div.comText img {
-	max-width: 500px;
-	width: expression(this.width > 500 ? "500px": this.width);
-	overflow: hidden;
-}
-#tt1 {
-	width: 1000px;
-	margin: 0px auto;
-}
-#tt1 #tt2 {
-	width: 926px;
-	margin: 0px auto;
-}
-#tt1 #tt2 #tt3 {
-	width: 700px;
-	margin: 0px auto;
-}
-#tt_foot {
-	width: 920px;
-	margin: 10px auto;
-}
-#blackboard_year {
-	position: relative;
-	top: 59px;
-	left: 934px;
-	color: #CFCFCF;
-	font-size: 12px;
-	width: 20px;
-	text-align: center;
-}
-#blackboard_month {
-	position: relative;
-	top: 81px;
-	left: 934px;
-	color: rgb(204,255,102);
-	font-size: 12px;
-	width: 20px;
-	text-align: center;
-}
-#blackboard_day {
-	position: relative;
-	top: 102px;
-	left: 934px;
-	color: rgb(255,153,204);
-	font-size: 12px;
-	width: 20px;
-	text-align: center;
-}
-#blackboard_week {
-	position: relative;
-	top: 170px;
-	left: 935px;
-	color: rgb(153,204,255);
-	font-size: 11px;
-	width: 20px;
-	text-align: center;
-	font-weight: bold;
-}
-/****************** 小型佈景*******************/
-#theme_title_small {
-	position: relative;
-	left: 40px;
-}
-#blackboard_small a {
-	color: rgb(0,0,0);
-	font-size: 12px;
-}
-#blackboard_small input {
-	border: 0px solid rgb(200,200,200);
-	background-color: rgb(255,255,255);
-	color: gray;
-	padding: 2px;
-	font-size: 11px;
-}
-#blackboard_small #user_menu {
-	position: relative;
-	top: 25px;
-	left: 0px;
-	color: #000000;
-	font-size: 11pt;
-	width: 600px;
-	float: right;
-	z-index: 10;
-}
-#blackboard_small .user_menu_opt {
-	display: inline;
-	margin-left: 10px;
-}
-#blackboard_small #user_menu a {
-	font-size: 11pt;
-	color: #000000;
-}
-#blackboard_small #have_mail a {
-	font-size: 30px;
-	color: rgb(255,102,255);
-	position: relative;
-	left: 80px;
-}
-#blackboard_small #login_box {
-	position: relative;
-	top: 3px;
-	left: 20px;
-	color: #ffffff;
-	font-size: 12px;
-	width: 460px;
-	float: right;
-	z-index: 10000;
-}
-#blackboard_small #login_link {
-	margin-top: 1px;
-}
-div.icon {
-	position: absolute;
-	bottom: 0px;
-	width: 72px;
-	text-align: center;
-}
-img.btn {
-	margin-left: auto;
-	margin-right: auto
-}
-#tad_main_content {
-  padding: 10px;
-	background-color: rgb(255,255,255);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-#tad_block_container {
-  padding: 10px;
-	background-color: rgb(247,246,243);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-a.block_config {
-	margin: -50px 6px;
-	display: block;
-	float: right;
-	width: 16px;
-	height: 16px;
-	background-image: url(../img/block_config.png);
-}
-#tad_container {
-}
+﻿@charset "utf-8";
+/*
+	Theme Factory
+	Versão		: 5.0
+	Autor		: Angelo Rocha
+	Site		: www.angelorocha.com.br
+	Contato		: contato@angelorocha.com.br
+	Licença		: GPL V.2.0
+*/
+
+@import url(reset.css);
+@import url(blocks.css);
+@import url(itensXoops.css);
+@import url(menu.css);
+@import url(effects.css);
+@import url(xoopseditor.css);
+@import url(system.css);
+
+
+#tf-container {background:#FFF; margin:0 auto; overflow:hidden;}
+
+#blockZone {background:#FFF; margin:0 auto; padding:0;}
+
+#pre-header{background:none; width:auto; height:auto; position:relative;}
+
+#tf-header{background:#F4F4F4; color:#000; height:40px; margin:0 auto;}
+
+.logo{font-family:arial; font-size:12pt; font-weight:bold; color:#000; padding:5px;}
+
+#tf-banner{float:right; padding-right:5px; padding-top:20px; position:relative;}
+
+#tf-footer{background:#F4F4F4; height:150px; display:block; text-align:center; margin:25px auto; position:relative;border:1px solid #F4F4F4;filter:alpha(opacity=90);-moz-opacity:0.9;opacity: 0.9;z-index:100;  -moz-border-radius: 10px; -webkit-border-radius: 10px;border-radius: 10px;behavior: url(ie-css3.htc);}
+
+#tf-footer-2{background:none;width:90%; margin:30px auto;}
+
+.clear{clear:both;}

@@ -1,3 +1,12 @@
+td.even label{
+  display:inline;
+}
+
+td.even input[type="text"], td.even textarea{
+  width:90%;
+}
+
+
 /* ===== 主選單 ===== */
 #mainmenu a {
 	display: block;
