@@ -1,35 +1,35 @@
 @charset "utf-8";
 /*
-	Theme Factory
-	Versão		: 5.0
-	Autor		: Angelo Rocha
-	Site		: www.angelorocha.com.br
-	Contato		: contato@angelorocha.com.br
-	Licença		: GPL V.2.0
+  Theme Factory
+  Versão    : 5.0
+  Autor   : Angelo Rocha
+  Site    : www.angelorocha.com.br
+  Contato   : contato@angelorocha.com.br
+  Licença   : GPL V.2.0
 */
 
 .curves{
-	border-radius:5px;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	-khtml-border-radius:5px;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  -khtml-border-radius:5px;
 }
 
 .shadow{
   -moz-box-shadow: :0px 0px 5px #333;
   -webkit-box-shadow: :0px 0px 5px #333;
-	box-shadow:0px 0px 5px #333;
-	behavior: url(../ie-css3.htc);
-	text-shadow:0px 0px 0px #333;
+  box-shadow:0px 0px 5px #333;
+  behavior: url(../ie-css3.htc);
+  text-shadow:0px 0px 0px #333;
 }
 
 .transition{
-	-webkit-transition: all 1s linear;
-	-moz-transition: all 1s linear;
-	-o-transition: all 1s linear;
-	transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
 .tShadow{
-	text-shadow:0px 0px 5px #333;
+  text-shadow:0px 0px 5px #333;
 }

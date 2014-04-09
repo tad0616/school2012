@@ -29,4 +29,8 @@ define("TF_SYSTEM_CONFIG",	"系統偏好設定");
 define("TF_SYSTEM_MODADM",	"線上安裝更新");
 define("TF_MODULE_CONFIG",	"模組管理區");
 define("TF_DL_TAD_THEMES",	"請安裝 Tad Themes 模組，可以讓您更進一步的調整佈景！");
+
+/**自訂設定之語系**/
+define("TF_SHOW_VAR", "顯示佈景變數資訊");
+define("TF_SHOW_VAR_DESC", "佈景開發時，會顯示所有 tad_themes 提供的控制變數及設定值");
 ?>

@@ -1,26 +1,26 @@
-<div id="leftBlock" style="<{$leftBlock}>">
+<div id="leftBlock" style="<{$leftBlocks}>" class="leftBlock">
   <{foreach item=block from=$xoBlocks.canvas_left}>
     <{if $block.content}>
-      <div class="xo-Block" style="<{$leftBlock2}>">
+      <div class="xo-Block" style="<{$leftBlocks2}>">
       <{if $block.title}>
         <{if $xoops_isadmin}>
-          <a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"><br style="clear:both;"></a>
+          <a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"></a>
         <{/if}>
-        
+
         <{includeq file="$theme_name/tpl/blockTitle.html"}>
-        
+
       <{/if}>
       <div class="blockContent"><{$block.content}></div>
       </div>
     <{/if}>
   <{/foreach}>
-  
+
   <{if $theme_type=='theme_type_1' || $theme_type=='theme_type_2'}>
-    <div id="rightBlock" style="<{$rightBlock}>">
+    <div id="rightBlock" style="<{$rightBlocks}>" class="rightBlock">
     	<{foreach item=block from=$xoBlocks.canvas_right}>
         <{if $block.content}>
-          <div class="xo-Block" style="<{$rightBlock2}>">
-          <{if $block.title}><{if $xoops_isadmin}><a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"></a><br style="clear:both;"><{/if}>
+          <div class="xo-Block" style="<{$rightBlocks2}>">
+          <{if $block.title}><{if $xoops_isadmin}><a href="<{$xoops_url}>/modules/system/admin.php?fct=blocksadmin&op=edit&bid=<{$block.id}>" class="block_config"></a><{/if}>
           <{includeq file="$theme_name/tpl/blockTitle.html"}>
           <{/if}>
           <div class="blockContent"><{$block.content}></div>

@@ -1,6 +1,6 @@
 <{if $xoBlocks.canvas_left && $xoBlocks.canvas_right}>
 
-    <div id="tf-centerZone" style="<{$centerBlock}>">
+    <div id="tf-centerZone" style="<{$centerBlocks}>">
 
     <{includeq file="$theme_name/tpl/centerBlock.html"}>
 
@@ -17,10 +17,10 @@
     <{includeq file="$theme_name/tpl/rightBottom.html"}>
 
     </div>
-    
+
 <{elseif $xoBlocks.canvas_left}>
 
-    <div id="tf-centerZone" style="<{$centerBlock}>">
+    <div id="tf-centerZone" style="<{$centerBlocks}>">
 
     <{includeq file="$theme_name/tpl/centerBlock.html"}>
 
@@ -37,10 +37,10 @@
     <{includeq file="$theme_name/tpl/rightBottom.html"}>
 
     </div>
-            	
+
 <{elseif $xoBlocks.canvas_right}>
-                    
-    <div id="tf-centerZone" style="<{$centerBlock}>">
+
+    <div id="tf-centerZone" style="<{$centerBlocks}>">
 
     <{includeq file="$theme_name/tpl/centerBlock.html"}>
 
@@ -57,10 +57,10 @@
     <{includeq file="$theme_name/tpl/rightBottom.html"}>
 
     </div>
-                        	
+
 <{else}>
 
-    <div id="tf-centerZone" style="<{$centerBlock}>">
+    <div id="tf-centerZone" style="<{$centerBlocks}>">
 
     <{includeq file="$theme_name/tpl/centerBlock.html"}>
 
@@ -77,5 +77,5 @@
     <{includeq file="$theme_name/tpl/rightBottom.html"}>
 
 </div>
-                                    
+
 <{/if}>

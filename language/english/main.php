@@ -29,4 +29,8 @@ define("TF_SYSTEM_CONFIG",	"Preferences");
 define("TF_SYSTEM_MODADM",	"Online install");
 define("TF_MODULE_CONFIG",	"Administration");
 define("TF_DL_TAD_THEMES",	"Please install \"Tad Themes\" module.");
+
+/**自訂設定之語系**/
+define("TF_SHOW_VAR", "Display themes vars.");
+define("TF_SHOW_VAR_DESC", "Display all variable of tad_themes module that you could use it to design theme.");
 ?>
