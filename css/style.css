@@ -28,8 +28,25 @@
 
 #tf-banner{float:right; padding-right:5px; padding-top:20px; position:relative;}
 
-#tf-footer{background:#F4F4F4; height:150px; display:block; text-align:center; margin:25px auto; position:relative;border:1px solid #F4F4F4;filter:alpha(opacity=90);-moz-opacity:0.9;opacity: 0.9;z-index:100;  -moz-border-radius: 10px; -webkit-border-radius: 10px;border-radius: 10px;behavior: url(ie-css3.htc);}
+#tf-footer{
+  background:#F4F4F4;
+  height:150px;
+  display:block;
+  text-align:center;
+}
 
-#tf-footer-2{background:none;width:90%; margin:30px auto;}
+#tf-footer-2{
+  background:none;
+  width:90%;
+  margin:30px auto;
+}
 
-.clear{clear:both;}
+.clear{
+  clear:both;
+}
+
+.xoops_content_shadow{
+  -moz-box-shadow: :0px 0px 5px 1px #333;
+  -webkit-box-shadow: :0px 0px 5px 1px #333;
+  box-shadow:0px 0px 5px 1px #333;
+}

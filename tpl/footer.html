@@ -1,6 +1,16 @@
-<div id="tf-footer" style="margin-bottom:<{$margin_bottom}>px;">
-	<div id="tf-footer-2">
-  <{if $xoops_isadmin}><a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a><{/if}>
-  <{$xoops_footer}>
-	</div>
-</div>
+
+<{if $xoops_footer}>
+  <style>
+  #tf-foote a,#tf-foote a:hover,#tf-foote a:active ,#tf-foote a:visited {
+    color:<{$footer_color}>;
+  }
+  </style>
+  <div id="tf-footer" class="row-fluid" style="clear:both;position:relative;margin-bottom:<{$margin_bottom}>px;">
+    <{if $xoops_isadmin}>
+      <a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a>
+    <{/if}>
+    <div class="span12" style="padding:60px;">
+      <{$xoops_footer}>
+    </div>
+  </div>
+<{/if}>

@@ -1,86 +1,26 @@
-@charset "utf-8";
-/*
-	Theme Factory
-	Versão		: 5.0
-	Autor		: Angelo Rocha
-	Site		: www.angelorocha.com.br
-	Contato		: contato@angelorocha.com.br
-	Licença		: GPL V.2.0
-*/
-/* 區塊標題列工具按鈕 by hc */
-a.block_config{margin:7px 9px 7px 9px;display:block;width:16px;height:16px;background-image:url(../images/block_config.png);}
-/* 區塊標題列工具按鈕舊格式
-a.block_config{margin-right:6px;display:block;float:right;width:16px;height:16px;background-image:url(../images/block_config.png);}
-*/
-a.block_config:hover{background-image:url(../images/block_config_hover.png);}
-/* Configuração geral dos blocos */
+.blockTitle{
+  font-weight:bold;
+  font-size:16px;
+}
 
-.xo-Block{margin:10px;}
-/* 區塊標題文字格式 by hc */
-.blockTitle{ font-size:1.25em;margin:10px auto 5px; font-weight:bold;line-height:1.5em;}
-/* 區塊標題文字舊格式
-.blockTitle{ color:#999; font-size:1.4em;padding:0 5px;margin:10px auto 5px;}
-*/
-
-.blockContent{padding:0 5px 2px 5px; overflow:hidden}
-.blockContent ul li{list-style:outside circle; margin-left:20px;}
-.blockContent li{list-style:outside circle; margin-left:20px;}
-
-/* Fim da configuração geral dos blocos */
-
-/* Configuração Individual dos Blocos */
-#leftBlock{overflow:hidden;}
-#leftBlock .xo-Block{}
-#leftBlock .xo-Block .blockTitle{}
-#leftBlock .xo-Block .blockContent{}
-
-
-#rightBlock{overflow:hidden;}
-#rightBlock .xo-Block{}
-#rightBlock .blockTitle{}
-#rightBlock .blockContent{}
-
-#centerBlock{}
-#centerBlock .xo-Block{}
-#centerBlock .blockTitle{}
-#centerBlock .blockContent{}
-
-#centerLeft{width:49%; float:left;}
-#centerLeft .xo-Block{}
-#centerLeft .blockTitle{}
-#centerLeft .blockContent{}
-
-#centerRight{width:49%; float:right;}
-#centerRight .xo-Block{}
-#centerRight .blockTitle{}
-#centerRight .blockContent{}
-
-#centerBottom{float:left; /*Limpa Titulo - Não remova*/}
-#centerBottom .xo-Block{}
-#centerBottom .blockTitle{}
-#centerBottom .blockContent{}
-
-#leftBottom{width:49%; float:left;}
-#leftBottom .xo-Block{}
-#leftBottom .blockTitle{}
-#leftBottom .blockContent{}
-
-#rightBottom{width:49%; float:right;}
-#rightBottom .xo-Block{}
-#rightBottom .blockTitle{}
-#rightBottom .blockContent{}
-
+.blockContent{
+  margin: 0px 6px 10px 6px;
+}
 
 
 /* 左區塊 */
 .leftBlock{
   position:relative;
+  width:90%;
+  margin:5px auto;
 }
 
 
 /* 右區塊 */
 .rightBlock{
   position:relative;
+  width:90%;
+  margin:5px auto;
 }
 
 /* 上中區塊 */
@@ -116,4 +56,5 @@ a.block_config:hover{background-image:url(../images/block_config_hover.png);}
 /* 下中右區塊 */
 .centerBottomRightBlock{
   position:relative;
+
 }

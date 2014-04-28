@@ -1,118 +1,56 @@
+<!DOCTYPE html>
+<html lang="<{$xoops_langcode}>">
+
 <{assign var=theme_name value=$xoTheme->folderName}>
-
+<!-- 取得佈景參數 -->
 <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/get_var.html"}>
-<{includeq file="$theme_name/tpl/header.html"}>
+<!-- 頁首 -->
+<{includeq file="$theme_name/tpl/head.html"}>
+
+  <body>
+    <div id="xoops_theme_wrap">
+      <!-- 頁面容器 -->
+
+      <div id="xoops_theme_container" style="position:relative;width:<{$theme_width}>px;margin:<{$margin_top}>px auto 0 auto;padding:0px;">
 
 
+        <div id="xoops_theme_content" style="width:auto;" <{if $use_shadow=='1' and $shadow_include_logo=='1'}>class="xoops_content_shadow"<{/if}>>
 
-<div id="xoops_theme_wrap" style="position:relative;margin-top:<{$margin_top}>px;">
-  <{if $logo_img and $logo_position=="page"}>
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/logo.html"}>
-  <{/if}>
+          <!-- logo -->
+          <{if $logo_img and $logo_position=="page"}>
+            <div style="background-color:<{$logo_bgcolor}>">
+              <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/logo.html"}>
+            </div>
+          <{/if}>
 
 
-  <div style="width:<{$theme_width}>px;padding:0px;margin:0 auto;" class="shadow">
-    <{if $use_search}>
-      <div id="tf-menu">
-        <{includeq file="$theme_name/tpl/search.html"}>
-        <div class="clear"></div>
+          <div id="xoops_theme_content_display" style="width:auto;" <{if $use_shadow=='1' and $shadow_include_logo=='0'}>class="xoops_content_shadow"<{/if}>>
+
+            <!-- 頁首 -->
+            <{includeq file="$theme_name/tpl/header.html"}>
+
+            <!-- 載入布局 -->
+            <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/$theme_type.html"}>
+
+            <!-- 頁尾 -->
+            <{includeq file="$theme_name/tpl/footer.html"}>
+
+          </div>
+        </div>
       </div>
+
+      <!-- 載入bootstrap -->
+      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/bootstrap_js.html"}>
+
+      <!-- 載入自訂js -->
+      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/my_js.html"}>
+    </div>
+
+
+    <!-- 顯示參數，開發用，開發完可刪除 -->
+    <{if $show_var=='1'}>
+      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/show_var.html"}>
     <{/if}>
 
-    <!-- NAVBAR位置 -->
-    <{if $navbar_pos!="default" and $navbar_pos!="not-use" and $navbar_pos!="navbar-static-bottom"}>
-      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/navbar.html"}>
-    <{/if}>
-
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/slideshow_responsive.html"}>
-
-    <!-- 導覽列 -->
-    <{if $navbar_pos=="navbar-static-bottom"}>
-      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/navbar.html"}>
-    <{/if}>
-
-    <{if $navbar_pos=="default"}>
-      <style>
-      #tf-container{
-        margin-top:30px;
-      }
-      #tf-menu2{
-        background-color:<{$navbar_bg_top}>;
-        color:<{$navbar_color}>;
-      }
-
-      #tf-menu2 a{
-        color:<{$navbar_color}>;
-      }
-
-      #tf-menu2 a:hover{
-        color:<{$navbar_color_hover}>;
-      }
-      </style>
-      <div id="tf-menu2">
-        <{includeq file="$theme_name/tpl/menu_text.html"}>
-        <{includeq file="$theme_name/tpl/loginbar-inline.html"}>
-        <div class="clear"></div>
-      </div>
-    <{/if}>
-  </div>
-
-
-  <div id="tf-container" class="shadow">
-
-    <div id="blockZone">
-
-      <{includeq file="$theme_name/tpl/leftBlock.html"}>
-      <{includeq file="$theme_name/tpl/centerZone.html"}>
-      <{if $theme_type!='theme_type_1' && $theme_type!='theme_type_2'}>
-        <{includeq file="$theme_name/tpl/rightBlock.html"}>
-      <{/if}>
-      <div class="clear"></div>
-
-  	</div>
-
-  </div>
-
-  <{includeq file="$theme_name/tpl/footer.html"}>
-  <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/bootstrap_js.html"}>
-
-
-  <!-- 顯示參數，開發用，開發完可刪除 -->
-  <{if $show_var=='1'}>
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/show_var.html"}>
-  <{/if}>
-
-  <{php}>
-  if(!file_exists(XOOPS_ROOT_PATH."/modules/tad_themes/xoops_version.php")){
-    echo '<div style="text-align:center;margin:10px auto;"><a href="http://www.tad0616.net/modules/tad_uploader/index.php?of_cat_sn=76" target="_blank">'.TF_DL_TAD_THEMES.'</a></div>';
-  }
-  <{/php}>
-</div>
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    var leftBlock=$('#leftBlock').height();
-    var centerBlock=$('#tf-centerZone').height();
-    var rightBlock=$('#rightBlock').height();
-    var maxheight=leftBlock;
-    if(rightBlock > maxheight) maxheight=rightBlock;
-    if(centerBlock > maxheight) maxheight=centerBlock;
-    <{if $theme_type=='theme_type_5' || $theme_type=='theme_type_6' || $theme_type=='theme_type_7'}>
-      $('#leftBlock').height(maxheight);
-      $('#rightBlock').height(maxheight);
-    <{elseif $theme_type=='theme_type_3' || $theme_type=='theme_type_4'}>
-      $('#leftBlock').height(maxheight);
-    <{/if}>
-
-    <{if $theme_type=='theme_type_1' || $theme_type=='theme_type_2'}>
-      var leftBlock_div=$("#leftBlock div").length;
-      if(leftBlock_div <= 1){
-        $("#leftBlock").width(0);
-        $("#tf-centerZone").width(<{$theme_width}>);
-      }
-    <{/if}>
-  });
-</script>
-</body>
-
+  </body>
 </html>
