@@ -18,6 +18,18 @@
     body{
       font-family:<{$font_family}>;
     }
+
+    #xoops_theme_left_zone{
+      <{if $left_separate=='1'}>
+        border-right:<{$separate_style}>;
+      <{/if}>
+    }
+
+    #xoops_theme_right_zone{
+      <{if $right_separate=='1'}>
+        border-<{if $theme_type=="theme_type_3" or $theme_type=="theme_type_4" or $theme_type=="theme_type_8"}>top<{else}>left<{/if}>:<{$separate_style}>;
+      <{/if}>
+    }
   </style>
 
 </head>
