@@ -12,7 +12,7 @@ $theme_kind_arr = 'html';
 $menu_var_kind = 'my_menu';
 
 //額外顏色設定 如： bootstrap3/themes/light/Cerulean
-$theme_color = '';
+$theme_color = 'bootstrap';
 
 /*
 tabs-1 版面基礎設定
@@ -102,7 +102,7 @@ $config_enable['slide_width'] = array('enable' => '1', 'min' => '', 'max' => '',
 $config_enable['slide_height'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '0');
 
 //是否可上傳滑動圖片[slideshow_responsive.html]
-$config_enable['use_slide'] = array('enable' => '', 'min' => '', 'max' => '', 'require' => '', 'default' => '');
+$config_enable['use_slide'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '', 'default' => '');
 
 /*
 tabs-4 logo圖
