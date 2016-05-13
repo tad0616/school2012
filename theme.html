@@ -11,15 +11,15 @@
     <div id="xoops_theme_wrap">
       <!-- 頁面容器 -->
 
-      <div id="xoops_theme_container" style="position:relative;width:<{$theme_width}>px;margin:<{$margin_top}>px auto 0 auto;padding:0px;">
+      <div id="xoops_theme_container" style="background:<{$base_color}>;position:relative;width:<{$theme_width}>px;margin:<{$margin_top}>px auto 0 auto;padding:0px;">
 
 
-        <div id="xoops_theme_content" style="width:auto;" <{if $use_shadow=='1' and $shadow_include_logo=='1'}>class="xoops_content_shadow"<{/if}>>
+        <div id="xoops_theme_content" style="width:auto;" <{if $use_shadow=='1' and $shadow_include_logo=='1'}>class="container xoops_content_shadow"<{/if}>>
 
           <!-- logo -->
           <{if $logo_img and $logo_position=="page"}>
             <div style="background-color:<{$logo_bgcolor}>">
-              <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/logo.html"}>
+              <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/logo.html"}>
             </div>
           <{/if}>
 
@@ -30,7 +30,7 @@
             <{includeq file="$theme_name/tpl/header.html"}>
 
             <!-- 載入布局 -->
-            <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/$theme_type.html"}>
+            <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/$theme_type.html"}>
 
             <!-- 頁尾 -->
             <{includeq file="$theme_name/tpl/footer.html"}>
@@ -40,10 +40,10 @@
       </div>
 
       <!-- 載入bootstrap -->
-      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/bootstrap_js.html"}>
+      <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/bootstrap_js.html"}>
 
       <!-- 載入自訂js -->
-      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/my_js.html"}>
+      <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/my_js.html"}>
     </div>
 
 

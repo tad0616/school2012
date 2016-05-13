@@ -5,7 +5,7 @@
 <a href="<{$xoops_url}>" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" class="logo"><{$xoops_sitename}></a>
 
 <{if $auto_mainmenu}>
-  <select style="font-size:12px;border:none;border-radius:2px;padding:2px;margin:2px 3px;height:24px;line-height:24px;" class="span2" onChange="location.href=this.value;">
+  <select style="width:100px;font-size:12px;border:none;border-radius:2px;padding:2px;margin:2px 3px;height:24px;line-height:24px;display:inline;" class="form-control" onChange="location.href=this.value;">
     <{php}>
     global $xoopsDB,$xoopsModule;
       echo "<option value='".XOOPS_URL."'>".THEME_MODULE1."</option>\n";

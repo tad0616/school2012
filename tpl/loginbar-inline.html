@@ -21,17 +21,33 @@
   <a href="<{$xoops_url}>/user.php?op=logout"><img src="<{$xoops_imageurl}>images/logout.png" alt="<{$smarty.const.TF_USER_EXIT}>" title="<{$smarty.const.TF_USER_EXIT}>" align="absmiddle" style="margin-right:4px;"><{$smarty.const.TF_USER_EXIT}></a>
   </span>
 <{else}>
-  <form style="margin: 0px;display:inline;float:right;" action="<{$xoops_url}>/user.php" method="post">
+
+
+  <form action="<{$xoops_url}>/user.php" method="post" class="form-inline pull-right" style="margin-right:10px;">
 
     <a href="<{$xoops_url}>/register.php"><img src="<{$xoops_imageurl}>images/check.png" alt="<{$smarty.const.TF_USER_REGIST}>" title="<{$smarty.const.TF_USER_REGIST}>" align="absmiddle" style="margin-right:4px;"><{$smarty.const.TF_USER_REGIST}></a>
     <a href="<{$xoops_url}>/user.php#lost"><img src="<{$xoops_imageurl}>images/login.png" alt="<{$smarty.const.TF_USER_FORGET_PASS}>" title="<{$smarty.const.TF_USER_FORGET_PASS}>" align="absmiddle" style="margin-right:4px;"><{$smarty.const.TF_USER_FORGET_PASS}></a>
 
-    <img src="<{$xoops_imageurl}>images/lock.png" alt="<{$smarty.const.TF_USER_ID}>" title="<{$smarty.const.TF_USER_ID}>" align="absmiddle" style="margin-right:4px;"><{$smarty.const.TF_USER_ID}>
-    <input type="text" name="uname"  id="uname" placeholder="<{$smarty.const.TF_USER_ID}>"  class="span2 input-small" style="font-size:12px;border:none;border-radius:2px;padding:2px;margin:2px 3px;height:20px;line-height:16px;" />
-    <input type="password" name="pass" id="pass" placeholder="<{$smarty.const.TF_USER_PASS}>" class="span2 input-small"  style="font-size:12px;border:none;border-radius:2px;padding:2px;margin:2px 3px;height:20px;line-height:16px;" />
-    <input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
-    <input type="hidden" name="op" value="login" />
-    <button type="submit" class="btn btn-mini"><{$smarty.const.TF_USER_ENTER}></button>
+    <div class="form-group">
+      <label for="uname" class="sr-only">
+        <i class="fa fa-lock" aria-hidden="true"></i> <{$smarty.const.TF_USER_ID}>
+      </label>
+      <input type="text" name="uname"  id="uname" placeholder="<{$smarty.const.TF_USER_ID}>" class="form-control input-sm" style="width:120px; color: #000;" >
+    </div>
+    <div class="form-group">
+      <label for="pass" class="sr-only">
+        <i class="fa fa-lock" aria-hidden="true"></i> <{$smarty.const.TF_USER_PASS}>
+      </label>
+      <input type="password" name="pass" id="pass" placeholder="<{$smarty.const.TF_USER_PASS}>"  class="form-control input-sm" style="width:120px;color: #000;" />
+    </div>
+
+
+    <div class="form-group">
+      <input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+      <input type="hidden" name="op" value="login" />
+      <button type="submit" class="btn btn-primary btn-sm"><{$smarty.const.TF_USER_ENTER}></button>
+    </div>
 
   </form>
+
 <{/if}>

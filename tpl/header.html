@@ -5,13 +5,12 @@
   <{/if}>
 
   <!-- 滑動圖 -->
-  <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/slideshow_responsive.html"}>
+  <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/slideshow_responsive.html"}>
 
   <{if $navbar_pos=="default"}>
     <style>
 
-    #tf-menu2{
-      width:100%;
+    #tf-menu2 , #tf-menu2_container{
       background-image: -moz-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
       background-image: -webkit-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
       background-image: -o-linear-gradient(top, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);
@@ -28,10 +27,11 @@
       color:<{$navbar_color_hover}>;
     }
     </style>
-    <div id="tf-menu2">
-      <{includeq file="$theme_name/tpl/menu_text.html"}>
-      <{includeq file="$theme_name/tpl/loginbar-inline.html"}>
-      <div class="clear"></div>
+    <div class="row" id="tf-menu2_container">
+      <div id="tf-menu2">
+        <{includeq file="$theme_name/tpl/menu_text.html"}>
+        <{includeq file="$theme_name/tpl/loginbar-inline.html"}>
+      </div>
     </div>
   <{/if}>
 
