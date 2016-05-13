@@ -1,43 +1,62 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
-<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
-<meta name="robots" content="<{$xoops_meta_robots}>" />
-<meta name="keywords" content="<{$xoops_meta_keywords}>" />
-<meta name="description" content="<{$xoops_meta_description}>" />
-<meta name="rating" content="<{$xoops_meta_rating}>" />
-<meta name="author" content="<{$xoops_meta_author}>" />
-<meta name="copyright" content="<{$xoops_meta_copyright}>" />
-<meta name="generator" content="XOOPS" />
-<meta http-equiv="X-UA-Compatible" content="IE=100" />
+<!DOCTYPE html>
+<html lang="<{$xoops_langcode}>">
 
-<title><{$xoops_sitename}><{if $xoops_pagetitle !=''}> - <{$xoops_pagetitle}><{/if}></title>
+<{assign var=theme_name value=$xoTheme->folderName}>
+<!-- 取得佈景參數 -->
+<{includeq file="$xoops_rootpath/modules/tadtools/themes_common/get_var.html"}>
+<!-- 頁首 -->
+<{includeq file="$theme_name/tpl/head.html"}>
+<script src="<{$xoops_url}>/browse.php?Frameworks/jquery/jquery.js" type="text/javascript"></script>
+<script src="<{$xoops_url}>/modules/tadtools/jquery/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="<{$xoops_url}>/modules/tadtools/jquery/ui/jquery-ui.js" type="text/javascript"></script>
+<script src="<{$xoops_url}>/modules/tadtools/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
 
-<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />							
-<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
-<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
-<{$xoops_module_header}>
-</head>
-<body id="closed">
-<div id="siteclosed">
-<div id="closemsg"><{$lang_siteclosemsg}></div>
+  <body>
+    <div id="xoops_theme_wrap">
+      <!-- 頁面容器 -->
 
-        <div id="closeform">
-            <form action="<{xoAppUrl index.php}>" method="post">
-            
-            <label><{$lang_username}></label>
-            <input type="text" name="uname" size="12" value="" /><br />
-            <div class="clear"></div>
-            <label><{$lang_password}></label>
-            <input type="password" name="pass" size="12" /><br />
-            <div class="clear"></div>
-            <input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
-            <input type="hidden" name="xoops_login" value="1" />
-            <input type="submit" value="<{$lang_login}>" />
-            
-            </form>
+      <div id="xoops_theme_container" style="background:<{$base_color}>;position:relative;width:<{$theme_width}>px;margin:<{$margin_top}>px auto 0 auto;padding:0px;">
+
+
+        <div id="xoops_theme_content" style="width:auto;" <{if $use_shadow=='1' and $shadow_include_logo=='1'}>class="container xoops_content_shadow"<{/if}>>
+
+          <!-- logo -->
+          <{if $logo_img and $logo_position=="page"}>
+            <div style="background-color:<{$logo_bgcolor}>">
+              <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/logo.html"}>
+            </div>
+          <{/if}>
+
+
+          <div id="xoops_theme_content_display" style="width:auto;" <{if $use_shadow=='1' and $shadow_include_logo=='0'}>class="xoops_content_shadow"<{/if}>>
+
+            <!-- 頁首 -->
+            <{includeq file="$theme_name/tpl/header.html"}>
+
+            <!-- 載入布局 -->
+            <div class="jumbotron">
+                <h1 class="text-center"><{$lang_siteclosemsg}></h1>
+            </div>
+
+            <!-- 頁尾 -->
+            <{includeq file="$theme_name/tpl/footer.html"}>
+
+          </div>
         </div>
-</div>
-</body>
+      </div>
+
+      <!-- 載入bootstrap -->
+      <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/bootstrap_js.html"}>
+
+      <!-- 載入自訂js -->
+      <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/my_js.html"}>
+    </div>
+
+
+    <!-- 顯示參數，開發用，開發完可刪除 -->
+    <{if $show_var=='1'}>
+      <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/show_var.html"}>
+    <{/if}>
+
+  </body>
 </html>
