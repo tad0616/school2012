@@ -6,10 +6,6 @@
 <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}>
 <!-- 頁首 -->
 <{includeq file="$theme_name/tpl/head.tpl"}>
-<script src="<{$xoops_url}>/browse.php?Frameworks/jquery/jquery.js" type="text/javascript"></script>
-<script src="<{$xoops_url}>/modules/tadtools/jquery/jquery-migrate.min.js" type="text/javascript"></script>
-<script src="<{$xoops_url}>/modules/tadtools/jquery/ui/jquery-ui.js" type="text/javascript"></script>
-<script src="<{$xoops_url}>/modules/tadtools/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
 
   <body>
     <div id="xoops_theme_wrap">
@@ -34,11 +30,7 @@
             <{includeq file="$theme_name/tpl/header.tpl"}>
 
             <!-- 載入布局 -->
-            <div class="row">
-              <div class="col-sm-12">
-                  <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/siteclosed_login.tpl"}>
-              </div>
-            </div>
+            <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/$theme_type.tpl"}>
 
             <!-- 頁尾 -->
             <{includeq file="$theme_name/tpl/footer.tpl"}>
