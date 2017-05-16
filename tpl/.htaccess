@@ -1,4 +1,4 @@
-<Files ~ ".html">
+<Files ~ ".tpl">
 order allow,deny
 deny from all
 </Files>
