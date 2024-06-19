@@ -3,10 +3,10 @@
   <meta charset="<{$xoops_charset}>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
-  <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/link_css.tpl"}>
+  <{include file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
+  <{include file="$xoops_rootpath/modules/tadtools/themes3_tpl/link_css.tpl"}>
   <{$xoops_module_header}>
-  <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/theme_css.tpl"}>
+  <{include file="$xoops_rootpath/modules/tadtools/themes3_tpl/theme_css.tpl"}>
 
   <style type="text/css">
     body{

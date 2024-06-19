@@ -1,1 +1,1 @@
-<{includeq file="$xoops_rootpath/modules/tadtools/themes_common/blocks_tpl/system/system_comments_controls.tpl"}>
+<{include file="$xoops_rootpath/modules/tadtools/themes_common/blocks_tpl/system/system_comments_controls.tpl"}>

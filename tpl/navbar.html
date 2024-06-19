@@ -35,8 +35,8 @@
               <{if $show_sitename==0}>
                 <li><a href="<{$xoops_url}>" style="color:<{$navbar_color}>"><{$smarty.const._TAD_HOME}></a></li>
               <{/if}>
-              <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu_main.tpl"}>
-              <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu_my.tpl"}>
+              <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu_main.tpl"}>
+              <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu_my.tpl"}>
             </ul>
 
             <ul class="nav pull-right" id="main-menu-right">
@@ -54,7 +54,7 @@
                   <{$smarty.const.TF_USER_WELCOME}><{$xoops_name}> <b class="caret"></b>
                 </a>
 
-                <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu_user.tpl"}>
+                <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu_user.tpl"}>
 
               </li>
             <{else}>
@@ -63,7 +63,7 @@
                   <{$smarty.const.TF_USER_ENTER}><b class="caret"></b>
                 </a>
 
-                <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu_login.tpl"}>
+                <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu_login.tpl"}>
               </li>
             <{/if}>
             </ul>
@@ -74,7 +74,7 @@
   </div>
 
 
-  <script type="text/javascript" src="<{xoAppUrl modules/tadtools/jquery.pin/jquery.pin.js}>"></script>
+  <script type="text/javascript" src="<{$xoops_url}>/modules/tadtools/jquery.pin/jquery.pin.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
       $("#navbar-wrapper").pin({
