@@ -1,7 +1,7 @@
-<{if $xoops_isuser}>
+<{if $xoops_isuser|default:false}>
   <span style="margin: 5px;display:inline;float:right;">
   <{$smarty.const.TF_USER_WELCOME}>&nbsp;&nbsp;<{$xoops_name}>&nbsp;&nbsp;
-  <{if $xoops_isadmin}>
+  <{if $xoops_isadmin|default:false}>
     <a href="<{$xoops_url}>/admin.php" style="color:#CCFF00;"><img src="<{$xoops_imageurl}>images/config.png" alt="<{$smarty.const.TF_USER_ADMIN}>" title="<{$smarty.const.TF_USER_ADMIN}>" align="absmiddle" style="margin-right:4px;"><{$smarty.const.TF_USER_ADMIN}></a>
 
     <a href="<{$xoops_url}>/modules/tad_themes/admin/main.php" style="color:#CCFF00;"><img src="<{$xoops_imageurl}>images/product_design.png" alt="<{$smarty.const.TF_THEME_ADMIN}>" title="<{$smarty.const.TF_THEME_ADMIN}>" align="absmiddle" style="margin-right:4px;"><{$smarty.const.TF_THEME_ADMIN}></a>

@@ -7,7 +7,7 @@
   </style>
   <div class="row">
     <div id="tf-footer"  style="clear:both;position:relative;margin-bottom:<{$margin_bottom}>px;">
-      <{if $xoops_isadmin}>
+      <{if $xoops_isadmin|default:false}>
         <a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a>
       <{/if}>
       <div style="padding:60px;">

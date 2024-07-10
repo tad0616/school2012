@@ -1,14 +1,7 @@
-<{if $xoops_isadmin}>
-  <{php}>
-  if(file_exists(XOOPS_VAR_PATH."/data/install_chk.php")){
-    echo "
-    <div class='alert alert-error'>
-      "._TAD_DEL_INSTALL_CHK."
+<{if $install_chk}>
+    <div class='alert alert-danger'>
+        <{$smarty.const._TAD_DEL_INSTALL_CHK}>
     </div>
-    ";
-    unlink(XOOPS_VAR_PATH."/data/install_chk.php");
-  }
-<{/php}>
 <{/if}>
 
 
@@ -35,13 +28,13 @@
               <{if $show_sitename==0}>
                 <li><a href="<{$xoops_url}>" style="color:<{$navbar_color}>"><{$smarty.const._TAD_HOME}></a></li>
               <{/if}>
-              <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu_main.tpl"}>
-              <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu_my.tpl"}>
+              <{include file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu_main.tpl"}>
+              <{include file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu_my.tpl"}>
             </ul>
 
             <ul class="nav pull-right" id="main-menu-right">
-            <{if $xoops_isuser}>
-              <{if $xoops_isadmin}>
+            <{if $xoops_isuser|default:false}>
+              <{if $xoops_isadmin|default:false}>
                 <{if $xoops_dirname=="" || $xoops_dirname=="system"}>
                   <li><a rel="tooltip" href="<{$xoops_url}>/admin.php" title="<{$smarty.const.TF_MODULE_CONFIG}>"><i class="icon-th-large <{$navbar_icon}>"></i></a></li>
                 <{else}>
@@ -54,7 +47,7 @@
                   <{$smarty.const.TF_USER_WELCOME}><{$xoops_name}> <b class="caret"></b>
                 </a>
 
-                <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu_user.tpl"}>
+                <{include file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu_user.tpl"}>
 
               </li>
             <{else}>
@@ -63,7 +56,7 @@
                   <{$smarty.const.TF_USER_ENTER}><b class="caret"></b>
                 </a>
 
-                <{include file="$xoops_rootpath/modules/tadtools/themes_common/menu_login.tpl"}>
+                <{include file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu_login.tpl"}>
               </li>
             <{/if}>
             </ul>

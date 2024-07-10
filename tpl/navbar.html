@@ -1,16 +1,8 @@
-<{if $xoops_isadmin}>
-  <{php}>
-  if(file_exists(XOOPS_VAR_PATH."/data/install_chk.php")){
-    echo "
-    <div class='alert alert-error'>
-      "._TAD_DEL_INSTALL_CHK."
+<{if $install_chk}>
+    <div class='alert alert-danger'>
+        <{$smarty.const._TAD_DEL_INSTALL_CHK}>
     </div>
-    ";
-    unlink(XOOPS_VAR_PATH."/data/install_chk.php");
-  }
-<{/php}>
 <{/if}>
-
 
 <{if $navbar_pos!="not-use" and $navbar_pos!="default"}>
   <div id="navbar-wrapper" style="z-index:10000;background-color:<{$navbar_bg_top}>;<{if $navbar_img}>background-image: url(<{$navbar_img}>);<{else}>background-image:linear-gradient(to bottom, <{$navbar_bg_top}>, <{$navbar_bg_bottom}>);<{/if}>">
@@ -40,8 +32,8 @@
             </ul>
 
             <ul class="nav pull-right" id="main-menu-right">
-            <{if $xoops_isuser}>
-              <{if $xoops_isadmin}>
+            <{if $xoops_isuser|default:false}>
+              <{if $xoops_isadmin|default:false}>
                 <{if $xoops_dirname=="" || $xoops_dirname=="system"}>
                   <li><a rel="tooltip" href="<{$xoops_url}>/admin.php" title="<{$smarty.const.TF_MODULE_CONFIG}>"><i class="icon-th-large <{$navbar_icon}>"></i></a></li>
                 <{else}>

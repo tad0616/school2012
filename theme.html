@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="<{$xoops_langcode}>">
 
-<{assign var=theme_name value=$xoTheme->folderName}>
+<{assign var="theme_name" value=$xoTheme->folderName}>
 <!-- 取得佈景參數 -->
-<{include file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}>
+<{* <{include file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}> *}>
 <!-- 頁首 -->
 <{include file="$theme_name/tpl/head.tpl"}>
 
