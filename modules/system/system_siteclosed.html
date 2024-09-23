@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<{$xoops_langcode}>">
+<html lang="<{$xoops_langcode|default:''}>">
 
 <{assign var="theme_name" value=$xoTheme->folderName}>
 <!-- 取得佈景參數 -->
@@ -15,14 +15,14 @@
     <div id="xoops_theme_wrap">
       <!-- 頁面容器 -->
 
-      <div id="xoops_theme_container" style="background:<{$base_color}>;position:relative;width:<{$theme_width}>px;margin:<{$margin_top}>px auto 0 auto;padding:0px;">
+      <div id="xoops_theme_container" style="background:<{$base_color|default:''}>;position:relative;width:<{$theme_width|default:''}>px;margin:<{$margin_top|default:''}>px auto 0 auto;padding:0px;">
 
 
         <div id="xoops_theme_content" style="width:auto;" <{if $use_shadow=='1' and $shadow_include_logo=='1'}>class="container xoops_content_shadow"<{/if}>>
 
           <!-- logo -->
           <{if $logo_img and $logo_position=="page"}>
-            <div style="background-color:<{$logo_bgcolor}>">
+            <div style="background-color:<{$logo_bgcolor|default:''}>">
               <{include file="$xoops_rootpath/modules/tadtools/themes3_tpl/logo.tpl"}>
             </div>
           <{/if}>
