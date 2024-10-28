@@ -11,7 +11,7 @@
 <script src="<{$xoops_url}>/modules/tadtools/jquery/ui/jquery-ui.js" type="text/javascript"></script>
 <script src="<{$xoops_url}>/modules/tadtools/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
 
-  <body>
+  <body  <{$prism_setup}>>
     <div id="xoops_theme_wrap">
       <!-- 頁面容器 -->
 

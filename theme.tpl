@@ -7,7 +7,7 @@
 <!-- 頁首 -->
 <{include file="$theme_name/tpl/head.tpl"}>
 
-  <body>
+  <body  <{$prism_setup}>>
     <div id="xoops_theme_wrap">
       <!-- 頁面容器 -->
 
