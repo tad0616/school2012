@@ -3,11 +3,11 @@
 
 <{assign var="theme_name" value=$xoTheme->folderName}>
 <!-- 取得佈景參數 -->
-<{* <{include file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}> *}>
+
 <!-- 頁首 -->
 <{include file="$theme_name/tpl/head.tpl"}>
 
-  <body  <{$prism_setup}>>
+  <body <{$prism_setup|default:''}>>
     <div id="xoops_theme_wrap">
       <!-- 頁面容器 -->
 

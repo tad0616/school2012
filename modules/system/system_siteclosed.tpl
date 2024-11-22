@@ -3,7 +3,7 @@
 
 <{assign var="theme_name" value=$xoTheme->folderName}>
 <!-- 取得佈景參數 -->
-<{* <{include file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}> *}>
+
 <!-- 頁首 -->
 <{include file="$theme_name/tpl/head.tpl"}>
 <script src="<{$xoops_url}>/browse.php?Frameworks/jquery/jquery.js" type="text/javascript"></script>
@@ -11,7 +11,7 @@
 <script src="<{$xoops_url}>/modules/tadtools/jquery/ui/jquery-ui.js" type="text/javascript"></script>
 <script src="<{$xoops_url}>/modules/tadtools/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
 
-  <body  <{$prism_setup}>>
+  <body <{$prism_setup|default:''}>>
     <div id="xoops_theme_wrap">
       <!-- 頁面容器 -->
 
